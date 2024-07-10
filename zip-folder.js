@@ -11,7 +11,7 @@ function zipFolder(sourceFolder, zipFilePath) {
     output.on('close', () => {
       console.log(`Successfully zipped folder ${sourceFolder} to ${zipFilePath}`);
       resolve(zipFilePath);
-    });
+    })
 
     archive.on('error', (err) => {
       reject(err);
