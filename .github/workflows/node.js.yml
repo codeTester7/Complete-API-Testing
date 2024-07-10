@@ -29,7 +29,9 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Run script to send email with HTML report
+    - name: Zip folder
+      run: node zip-folder.js
+    - name: Send email with ZIP attachment
       run: node send-report.js
       env:
         SMTP_HOST: ${{ secrets.SMTP_HOST }}
@@ -38,3 +40,4 @@ jobs:
         SMTP_PASS: ${{ secrets.SMTP_PASS }}
         TO_EMAIL: callmemahi9@gmail.com
         FROM_EMAIL: demo80824@gmail.com
+        ATTACHMENT_PATH: ./report.zip
