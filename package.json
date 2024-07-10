@@ -1,0 +1,28 @@
+{
+  "name": "complete-api-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.1.5",
+    "jest-html-reporters": "^3.1.7",
+    "jest-junit-reporter": "^1.1.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.5"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/supertest": "^6.0.2",
+    "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.14"
+  }
+}
